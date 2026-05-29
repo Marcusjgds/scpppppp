@@ -8,7 +8,4 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, '0.0.0.0', () => {
-  console.log('Listening on port ' + PORT);
-});
+app.listen(process.env.PORT || 3000, '0.0.0.0');
